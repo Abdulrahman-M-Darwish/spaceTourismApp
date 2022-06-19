@@ -1,0 +1,159 @@
+// headings
+
+.h150 {
+  font-size: 80px;
+  font-family: "Bellefair", serif;
+  @include minMedia(456) {
+    font-size: 150px;
+  }
+}
+
+.tt {
+  text-transform: uppercase;
+}
+
+.h100 {
+  font-size: 56px;
+  font-family: "Bellefair", serif;
+  @include minMedia(456) {
+    font-size: 80px;
+  }
+  @include minMedia(992) {
+    font-size: 100px;
+  }
+}
+
+.h56 {
+  font-size: 24px;
+  font-family: "Bellefair", serif;
+  @include minMedia(768) {
+    font-size: 40px;
+  }
+  @include minMedia(991) {
+    font-size: 56px;
+  }
+}
+
+.h32 {
+  font-size: 16px;
+  font-family: "Bellefair", serif;
+  @include minMedia(768) {
+    font-size: 24px;
+  }
+  @include minMedia(991) {
+    font-size: 32px;
+  }
+}
+
+.h28l {
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  font-family: "Barlow Condensed", sans-serif;
+  @include minMedia(456) {
+    font-size: 20px;
+    letter-spacing: 3.38px;
+  }
+  @include minMedia(991) {
+    font-size: 28px;
+    letter-spacing: 4.75px;
+  }
+}
+
+.h28 {
+  font-size: 28px;
+  font-family: "Bellefair", serif;
+}
+
+.h14 {
+  font-size: 14px;
+  letter-spacing: 2.35px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.h16 {
+  font-size: 14px;
+  letter-spacing: 2.7px;
+  font-family: "Barlow Condensed", sans-serif;
+  @include minMedia(768) {
+    font-size: 16px;
+  }
+}
+
+.body-text {
+  font-size: 15px;
+  line-height: 25px;
+  @include minMedia(768) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  @include minMedia(992) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+// colors
+
+.cw {
+  color: $white;
+}
+
+.cp {
+  color: $pink;
+}
+
+.cb {
+  color: $black;
+}
+
+.page-title {
+  font-weight: 400;
+  padding-bottom: 32px;
+  padding-top: 24px;
+  justify-content: center;
+  display: flex;
+  gap: 16px;
+  @include minMedia(456) {
+    padding-left: 38.5px;
+    justify-content: flex-start;
+  }
+  @include minMedia(768) {
+    padding-top: 40px;
+  }
+  @include minMedia(992) {
+    padding-top: 76px;
+    padding-left: 165px;
+    gap: 24px;
+  }
+  span {
+    color: #ffffff;
+    opacity: 0.25;
+    font-weight: 700;
+  }
+}
+
+.container {
+  padding: 0 24px;
+  @include minMedia(768) {
+    padding: 0 97.5px;
+  }
+  @include minMedia(992) {
+    padding: 0 165.5px;
+  }
+}
+
+.container-left {
+  padding-left: 24px;
+  @include minMedia(768) {
+    padding-left: 97px;
+  }
+  @include minMedia(992) {
+    padding-left: 165.5px;
+  }
+}
+
+.tac {
+  @include maxMedia(992) {
+    text-align: center;
+  }
+}

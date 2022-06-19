@@ -1,0 +1,108 @@
+.crew-page {
+  flex: 1;
+  .page-title {
+    @include minMedia(992) {
+      margin-bottom: 0;
+    }
+  }
+  .container {
+    flex: 1;
+    .content {
+      flex: 1;
+      margin-top: 32px;
+      gap: 32px;
+      @include minMedia(768) {
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        gap: 0;
+        margin-top: 60px;
+      }
+      @include minMedia(992) {
+        margin-top: 0;
+        flex-direction: row-reverse;
+      }
+      .img {
+        position: relative;
+        justify-content: center;
+        @include minMedia(768) {
+          overflow: hidden;
+        }
+        img {
+          width: 54%;
+          @include minMedia(768) {
+            width: auto;
+            transform: translateY(40px);
+          }
+          @include minMedia(992) {
+            transform: translateY(10px);
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background-color: #383b4b;
+          @include minMedia(768) {
+            display: none;
+          }
+        }
+      }
+      .script-controler {
+        gap: 32px;
+        margin-bottom: 100px;
+        @include minMedia(768) {
+          flex-direction: column-reverse;
+          gap: 40px;
+        }
+        @include minMedia(992) {
+          align-items: flex-start;
+          gap: 120px;
+        }
+        .controlers {
+          ul {
+            gap: 16px;
+            justify-content: center;
+            @include minMedia(992) {
+              gap: 24px;
+            }
+            li {
+              width: 10px;
+              height: 10px;
+              background-color: white;
+              opacity: 0.17;
+              border-radius: 50%;
+              @include minMedia(992) {
+                width: 15px;
+                height: 15px;
+              }
+              &.active {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        .script {
+          h3 {
+            gap: 8px;
+            margin-bottom: 16px;
+            @include minMedia(992) {
+              gap: 15px;
+              margin-bottom: 27px;
+            }
+            .role {
+              opacity: 0.5;
+            }
+          }
+          p {
+            @include minMedia(992) {
+              max-width: 450px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

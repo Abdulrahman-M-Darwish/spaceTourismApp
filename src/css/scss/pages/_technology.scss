@@ -1,0 +1,78 @@
+.technology-page {
+  .content {
+    margin-bottom: 50px;
+    gap: 34px;
+    @include minMedia(992) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+    @include minMedia(768) {
+      margin-top: 60px;
+      gap: 58px;
+    }
+    .img {
+      img {
+        width: 100%;
+      }
+    }
+    .text {
+      gap: 26px;
+      @include minMedia(768) {
+        gap: 40px;
+      }
+      @include minMedia(992) {
+        flex-direction: row;
+      }
+      .tabs {
+        gap: 16px;
+        justify-content: center;
+        @include minMedia(992) {
+          flex-direction: column;
+          gap: 32px;
+        }
+        li {
+          width: 40px;
+          height: 40px;
+          border: 1px solid rgba($color: $white, $alpha: 0.25);
+          border-radius: 50%;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          user-select: none;
+          @include minMedia(768) {
+            width: 60px;
+            height: 60px;
+          }
+          @include minMedia(992) {
+            width: 80px;
+            height: 80px;
+          }
+          &.active {
+            background-color: $white;
+            color: $black;
+            border-color: $white;
+          }
+        }
+      }
+      .tabs-content {
+        gap: 16px;
+        align-items: center;
+        h3 {
+          font-weight: 400;
+          gap: 9px;
+          @include minMedia(768) {
+            gap: 16px;
+          }
+          @include minMedia(992) {
+            align-self: start;
+          }
+        }
+        p {
+          max-width: 444px;
+        }
+      }
+    }
+  }
+}

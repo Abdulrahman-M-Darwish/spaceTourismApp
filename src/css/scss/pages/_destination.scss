@@ -1,0 +1,102 @@
+.destination-page {
+  padding-bottom: 58px;
+  .page-title {
+    @include minMedia(768) {
+      margin-bottom: 60px;
+    }
+  }
+  .container {
+    .content {
+      gap: 26px;
+      @include minMedia(768) {
+        gap: 53px;
+      }
+      @include minMedia(991) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .planets {
+        img {
+          width: 170px;
+          @include minMedia(456) {
+            width: 300px;
+          }
+          @include minMedia(768) {
+            width: 445px;
+          }
+        }
+      }
+      .script {
+        @include minMedia(992) {
+          max-width: 450px;
+        }
+        .tabs {
+          gap: 26px;
+          justify-content: center;
+          margin-top: 26px;
+          margin-bottom: 20px;
+          @include minMedia(991) {
+            justify-content: start;
+          }
+          li {
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -8px;
+              left: 0;
+              width: 100%;
+              transform: translateX(-100%);
+              height: 3px;
+              background-color: white;
+              opacity: 0;
+              transition: 0.3s;
+            }
+            &:hover::after {
+              transform: translateX(0);
+              opacity: 0.5;
+            }
+            &.active {
+              color: $white;
+            }
+            &.active::after {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+        }
+        .heading {
+          margin-top: 28px;
+          margin-bottom: 0;
+          line-height: 64.18px;
+          @include minMedia(768) {
+            line-height: 91.68px;
+            margin-top: 48px;
+          }
+        }
+        p {
+          &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            background-color: #383b4b;
+          }
+        }
+        .the-way {
+          gap: 32px 0;
+          justify-content: space-evenly;
+          @include minMedia(991) {
+            justify-content: start;
+            flex-direction: row;
+            gap: 32px 79px;
+          }
+          .sub {
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+}
